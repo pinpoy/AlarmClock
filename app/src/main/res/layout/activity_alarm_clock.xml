@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jesgoo.fast.widget.MySlidingView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_sliding_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_bk"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ontime_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="15:15"
+            android:textColor="@color/white_EC"
+            android:textSize="75sp" />
+
+
+        <TextView
+            android:id="@+id/ontime_nap"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/alarm_circle"
+            android:gravity="center"
+            android:text="稍后提醒"
+            android:textColor="@color/white_EC"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/sliding_tip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:drawablePadding="10dp"
+        android:drawableTop="@mipmap/slide_up"
+        android:text="向上滑动关闭闹钟"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</com.jesgoo.fast.widget.MySlidingView>

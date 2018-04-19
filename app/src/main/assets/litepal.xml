@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="weac"/>
+
+    <version value="2"/>
+
+    <list>
+        <mapping class="com.jesgoo.fast.bean.AlarmClock"/>
+        <mapping class="com.jesgoo.fast.bean.Timer"/>
+        <!--<mapping class="com.kaku.weac.bean.CityManage"/>-->
+    </list>
+</litepal>  

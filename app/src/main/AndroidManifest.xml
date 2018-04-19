@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jesgoo.fast">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 操作SD卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!--手机震动的权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AlarmClockEditActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.RingSelectActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AlarmClockOntimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TimerEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TimerOnTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TimerDetailActivity"
+            android:screenOrientation="portrait" />
+
+
+
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".brocast.AlarmClockBroadcast"
+            android:process=":daemon">
+            <!--广播定义单独进程，在6.0上接受不到，不定义进程退到后台也接受不到。-->
+            <!--广播和后台运行的服务保持在一个线程，只要服务不死，这样就都可以接受到广播了-->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".brocast.AlarmClockProcessReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.kaku.weac.AlarmClockOff" />
+            </intent-filter>
+        </receiver>
+
+
+
+        <service
+            android:name=".service.CountDownService">
+        </service>
+
+    </application>
+
+</manifest>

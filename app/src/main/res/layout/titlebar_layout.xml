@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 标题栏：总布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal"
+    android:weightSum="60">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="14">
+
+        <ViewStub
+            android:id="@+id/vs_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout="@layout/titlebar_left_box" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="32">
+
+        <ViewStub
+            android:id="@+id/vs_center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout="@layout/titlebar_center_box" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_weight="14">
+
+        <LinearLayout
+            android:id="@+id/vs_right_group"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="14"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ViewStub
+                    android:id="@+id/vs_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout="@layout/titlebar_right_box" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_vb_right2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ViewStub
+                    android:id="@+id/vs_right2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout="@layout/titlebar_right2_box" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

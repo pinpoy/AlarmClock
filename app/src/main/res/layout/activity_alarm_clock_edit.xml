@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_bk"
+    android:orientation="vertical">
+
+    <com.jesgoo.fast.widget.TitleBarView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:leftText="取消"
+        app:leftTxtColor="@color/color_35E0FF"
+        app:rightText="保存"
+        app:rightTxtColor="@color/color_35E0FF"
+        app:titleColor="@color/white"
+        app:titleText="编辑闹钟" />
+
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:timePickerMode="spinner"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.weigan.loopview.LoopView
+                android:id="@+id/loopView_hour"
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                app:awv_centerTextColor="@color/white_EC"
+                app:awv_dividerTextColor="@color/white_trans50"
+                app:awv_textsize="25" />
+
+            <com.weigan.loopview.LoopView
+                android:id="@+id/loopView_minute"
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                app:awv_centerTextColor="@color/white_EC"
+                app:awv_dividerTextColor="@color/white_trans50"
+                app:awv_textsize="25" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=":"
+            android:textColor="@color/white_EC"
+            android:textSize="25sp" />
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_edit_voice"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white_trans10"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="铃声"
+            android:textColor="@color/white_EC"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/alarm_edit_exbend" />
+
+        <TextView
+            android:id="@+id/tv_edit_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:text="默认"
+            android:textColor="@color/white_EC"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_edit_time"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/white_trans10"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="重复"
+            android:textColor="@color/white_EC"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/alarm_edit_exbend" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:text="每天"
+            android:textColor="@color/white_EC"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/white_trans10"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="备注"
+            android:textColor="@color/white_EC"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/et_edit_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="在此添加你的备注"
+            android:singleLine="true"
+            android:textColor="@color/white_EC"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

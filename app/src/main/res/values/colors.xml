@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- base color -->
+    <color name="gray">#E3E3E3</color>
+    <color name="black">#000000</color>
+    <color name="yellow">#ff8a36</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="dlg_btn">#157EFB</color>
+    <color name="divider">#E0E0E0</color>
+
+    <color name="title_bar_right_1">#E0E0E0</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_yellow">#FFFF00</color>
+    <color name="color_orange">#FFA500</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_EC">#FFFFEC</color>
+    <color name="title_bar_center_1">#030303</color>
+
+    <color name="dark_black_trans50">#80000000</color>
+    <color name="dark_black_trans90">#E6000000</color>
+    <color name="translucent_half">#0D000000</color>
+    <!-- 白色:20 -->
+    <color name="white_trans30">#4dffffff</color>
+
+    <color name="colorTimer">#009688</color>
+    <color name="colorTimerDark">#00796B</color>
+
+    <color name="white_trans90">#e6ffffff</color>
+    <color name="white_trans50">#80ffffff</color>
+    <!-- 白色:90 -->
+    <color name="black_trans80">#CC000000</color>
+    <!-- 黑色：80 -->
+
+
+    <color name="color_35E0FF">#35E0FF</color>
+    <color name="white_trans10">#1AFFFFFF</color>
+
+
+</resources>
